@@ -22,7 +22,7 @@ export default function ProjectsPage() {
       desc: "An original audio production exploring atmosphere, emotion, and musical storytelling through layered sound design and composition.",
       tag: "Featured Project",
       type: "video",
-      src: "/video/strings.mp4",
+      src: "/video/test.mp4",
       featured: true,
     },
     {
