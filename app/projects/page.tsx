@@ -21,8 +21,8 @@ export default function ProjectsPage() {
       title: "Strings of Serenity",
       desc: "An original audio production exploring atmosphere, emotion, and musical storytelling through layered sound design and composition.",
       tag: "Featured Project",
-      type: "video",
-      src: "/video/test.mp4",
+      type: "youtube",
+      src: "F_TYfyrW0W8",
       featured: true,
     },
     {
@@ -191,15 +191,24 @@ export default function ProjectsPage() {
       transition duration-500
     "
   >
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="w-full h-full object-cover"
-    >
-      <source src={featuredProject.src} type="video/mp4" />
-    </video>
+    {featuredProject.type === "youtube" ? (
+  <iframe
+    className="w-full h-full"
+    src={`https://www.youtube.com/embed/${featuredProject.src}?autoplay=1&mute=1&loop=1&playlist=${featuredProject.src}&controls=0`}
+    title={featuredProject.title}
+    allow="autoplay; encrypted-media"
+  />
+) : (
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover"
+  >
+    <source src={featuredProject.src} type="video/mp4" />
+  </video>
+)}
 
     {/* overlay */}
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -356,7 +365,9 @@ export default function ProjectsPage() {
         </h3>
 
         <p className="text-zinc-500 mt-2">
-          Dubbing & Voice Synchronization Project
+          {selected.title === "Strings of Serenity"
+            ? "Original Audio Production"
+            : "Dubbing & Voice Synchronization Project"}
         </p>
       </div>
 
