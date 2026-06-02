@@ -76,7 +76,6 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               className="uppercase tracking-[0.6em] text-zinc-400 text-xs"
             >
-              AUDIO ENGINEERING • SOUND DESIGN • FILM AUDIO
             </motion.p>
 
        <motion.h1
@@ -224,20 +223,22 @@ export default function Home() {
 
               {/* IMAGE */}
               <Image
-                    src="/photos/7.jpg"
-                  alt="LC Prasmo"
-                  width={560}
-                  height={720}
-                  priority
-                  className="
-                    relative z-10
-                    rounded-[40px]
-                    object-cover
-                    border border-white/10
-                    shadow-2xl
-                    hover:scale-[1.02]
-                    transition duration-700
-                  "
+                src="/photos/7.jpg"
+                alt="LC Prasmo"
+                width={420}
+                height={540}
+                priority
+                className="
+                  relative z-10
+                  w-[320px] md:w-[380px] lg:w-[420px]
+                  h-auto
+                  rounded-[40px]
+                  object-cover
+                  border border-white/10
+                  shadow-2xl
+                  hover:scale-[1.02]
+                  transition duration-700
+                "
               />
 
             </div>
